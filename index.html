@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="react.js"></script>
+    <script src="reactDOM.js"></script>
+    <title>React Component without webpack & Babel</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        class first extends React.Component {
+            render() {
+                return (React.createElement("div", null,
+                React.createElement("h1" , null ,
+                React.createElement("em" , null ,  "Hello React")
+                
+                ) 
+                
+                
+                ));
+            }
+        }
+
+        ReactDOM.render(
+            React.createElement(first ,null) , document.getElementById("root")
+        );
+    </script>
+
+
+</body>
+
+</html>
